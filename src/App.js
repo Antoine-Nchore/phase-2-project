@@ -1,12 +1,9 @@
-import Button from 'react-bootstrap/Button';
+import React from 'react'
 
 function App() {
   return (
-    <>
-    <h1>Hello World</h1>
-    <Button variant="warning">Warning</Button>
-    </>
-  );
+    <div>App</div>
+  )
 }
 
-export default App;
+export default App
