@@ -1,10 +1,10 @@
-import Button from 'react-bootstrap/Button';
+import Cartegory from './Components/Cartegory';
 
 function App() {
   return (
     <>
-    <h1>Hello World</h1>
-    <Button variant="warning">Warning</Button>
+    <Cartegory/>
+
     </>
   );
 }
