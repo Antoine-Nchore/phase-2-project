@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Stack from "react-bootstrap/Stack";
 
 function Cart({ cart, calculateSubtotal, removeFromCart }) {
+  const [orderPlaced, setOrderPlaced] = useState(false);
+
+const handlePlaceOrder = () => {
+  if (!orderPlaced) {
+  setOrderPlaced(true);
+  alert("Dear customer, your order has been successfully placed.");
+  }
+};
+  
   return (
     <Row>
       <Col sm={8}>
@@ -63,17 +72,18 @@ function Cart({ cart, calculateSubtotal, removeFromCart }) {
         >
           <h5 className="p-2">CART SUMMARY</h5>
           <div className="p-2">
-            <strong>Subtotal $ {calculateSubtotal()}</strong>
+            <strong>Subtotal $ {calculateSubtotal().toFixed(2)}</strong>
           </div>
           <Button
-            variant="warning"
+            variant={orderPlaced ? "success" : "warning"}
+            onClick={handlePlaceOrder}
             style={{
               marginRight: "30px",
               marginLeft: "30px",
               marginBottom: "10px",
             }}
           >
-            Place Order
+            {orderPlaced ? "Pending Order" : "Place Order"}
           </Button>
         </Stack>
       </Col>
