@@ -11,8 +11,8 @@ function Results({ products, addToCart }) {
         <Col key={product.id}>
           <Card
             style={{
-              width: "16rem",
-              height: "38rem",
+              width: "14rem",
+              height: "28rem",
               marginTop: "20px",
               marginLeft: "10px",
             }}
@@ -24,7 +24,7 @@ function Results({ products, addToCart }) {
             />
             <Card.Body>
               <Card.Title>
-                <h2>{product.title}</h2>
+                <h5>{product.title}</h5>
               </Card.Title>
               <Card.Text>${product.price}</Card.Text>
               <Button variant="warning" onClick={() => addToCart(product)}>

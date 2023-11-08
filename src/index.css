@@ -1,3 +1,9 @@
 .icon:hover{
   color: orange;
 }
+
+.bi bi-stars{
+  height: 30px;
+  width: 30px;
+  color: orange;
+}
