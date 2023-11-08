@@ -27,7 +27,7 @@ const handlePlaceOrder = () => {
 };
 
   return (
-    <Row>
+    <Row style={{marginTop: "20px"}}>
       <Col sm={8}>
         {Array.from(new Set(cart.map((item) => item.id)).values()).map(
           (productId) => {
