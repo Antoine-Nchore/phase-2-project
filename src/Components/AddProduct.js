@@ -1,10 +1,7 @@
-// Write code here
-import React from 'react'
+import Button from "react-bootstrap/Button";
 
 function AddProduct() {
-  return (
-    <div>AddProduct</div>
-  )
+  return <Button variant="outline-primary">Add Product</Button>;
 }
 
-export default AddProduct
+export default AddProduct;

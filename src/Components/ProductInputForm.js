@@ -6,11 +6,11 @@ import Form from "react-bootstrap/Form";
 
 function ProductInputForm() {
   const [data, setData] = useState({
-    title: "",
-    price: "",
-    description: "",
-    category: "",
-    image: "",
+    title: " ",
+    price: " ",
+    description: " ",
+    category: " ",
+    image: " ",
   });
 
   const handleChange = (e) => {
@@ -32,57 +32,59 @@ function ProductInputForm() {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <h1>Enter new Product</h1>
-      <Form.Group className="mb-3">
-        <Form.Control
-          type="text"
-          name="title"
-          onChange={handleChange}
-          placeholder="Enter Title"
-        />
-      </Form.Group>
+    <div class="container d-flex justify-content-center">
+      <Form onSubmit={handleSubmit}>
+        <h1>Enter new Product</h1>
+        <Form.Group className="mb-3">
+          <Form.Control
+            type="text"
+            name="title"
+            onChange={handleChange}
+            placeholder="Title"
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3">
-        <Form.Control
-          type="number"
-          name="price"
-          onChange={handleChange}
-          placeholder="Enter Price"
-        />
-      </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Control
+            type="number"
+            name="price"
+            onChange={handleChange}
+            placeholder="Price"
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3">
-        <Form.Control
-          type="text"
-          name="description"
-          onChange={handleChange}
-          placeholder="Enter Description"
-        />
-      </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Control
+            type="text"
+            name="description"
+            onChange={handleChange}
+            placeholder="Description"
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3">
-        <Form.Control
-          type="text"
-          name="category"
-          onChange={handleChange}
-          placeholder="Category"
-        />
-      </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Control
+            type="text"
+            name="category"
+            onChange={handleChange}
+            placeholder="Category"
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3">
-        <Form.Control
-          type="URL"
-          name="image"
-          onChange={handleChange}
-          placeholder="Enter Image URL"
-        />
-      </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Control
+            type="URL"
+            name="image"
+            onChange={handleChange}
+            placeholder="Image URL"
+          />
+        </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </div>
   );
 }
 
