@@ -1,29 +1,47 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 function ProductInputForm() {
+  const [data, setData] = useState({
+    title: "",
+    price: "",
+    description: "",
+    category: "",
+    image: "",
+  });
   return (
-       <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
+    <Form>
+      <h1>Enter new Product</h1>
+      <Form.Group className="mb-3">
+        <Form.Control type="text" name="title" placeholder="Enter Title" />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+      <Form.Group className="mb-3">
+        <Form.Control type="number" name="price" placeholder="Enter Price" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+
+      <Form.Group className="mb-3">
+        <Form.Control
+          type="text"
+          name="description"
+          placeholder="Enter Description"
+        />
       </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Control type="text" name="category" placeholder="Category" />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Control type="URL" name="image" placeholder="Enter Image URL" />
+      </Form.Group>
+
       <Button variant="primary" type="submit">
         Submit
       </Button>
     </Form>
-  )
+  );
 }
 
-export default ProductInputForm
+export default ProductInputForm;

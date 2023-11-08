@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import React, {useEffect, useState} from 'react';
+import ProductInputForm from './Components/ProductInputForm';
 
 
 const baseURL = "http://localhost:8001/products";
@@ -17,6 +18,7 @@ function App() {
     <>
     <h1>Hello World</h1>
     <Button variant="warning">Warning</Button>
+    <ProductInputForm />
     </>
   );
 }
