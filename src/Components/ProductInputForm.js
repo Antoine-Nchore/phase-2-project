@@ -1,93 +1,107 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 // const BASE_URL = " http://localhost:8001/products";
 
 function ProductInputForm() {
   const [products, setProducts] = useState({
-    title: " ",
-    price: " ",
-    description: " ",
-    category: " ",
-    image: " ",
+    title: "",
+    description: "",
+    category: "",
+    image: "",
+    price: 0,
   });
 
   const handleChange = (e) => {
-    const name = e.target;
+    const { name, value } = e.target;
 
-    setData({ ...products, [name]: value });
+    setProducts({ ...products, [name]: value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     fetch("http://localhost:8001/products", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(products),
     })
-      .then((res) => {})
-      .catch((err) => {});
+      .then((res) => res.json())
+      .then((data) =>
+        setProducts({
+          title: "",
+          description: "",
+          category: "",
+          image: "",
+          price: 0,
+        })
+      )
+      .catch((err) => console.log(err));
   };
 
   return (
     <div class="container d-flex justify-content-center">
       <Form onSubmit={handleSubmit}>
-        <h1>Enter new Product</h1>
-        <Form.Group className="mb-3">
-          <Form.Control
-            type="text"
-            name="title"
-            value={product.title}
-            onChange={handleChange}
-            placeholder="Title"
-          />
-        </Form.Group>
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Title</Form.Label>
+            <Form.Control
+              type="text"
+              name="title"
+              onChange={handleChange}
+              placeholder="Enter title"
+              value={products.title}
+            />
+          </Form.Group>
 
-        <Form.Group className="mb-3">
-          <Form.Control
-            type="number"
-            name="price"
-            value={product.price}
-            onChange={handleChange}
-            placeholder="Price"
-          />
-        </Form.Group>
+          <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Label>Description</Form.Label>
+            <Form.Control
+              type="text"
+              name="description"
+              onChange={handleChange}
+              placeholder="Enter Description"
+              value={products.description}
+            />
+          </Form.Group>
+        </Row>
 
-        <Form.Group className="mb-3">
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Category</Form.Label>
+            <Form.Control
+              type="text"
+              name="category"
+              onChange={handleChange}
+              placeholder="Enter category"
+              value={products.category}
+            />
+          </Form.Group>
+          <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Label>Price</Form.Label>
+            <Form.Control
+              type="number"
+              name="price"
+              onChange={handleChange}
+              placeholder="Price"
+              value={products.price}
+            />
+          </Form.Group>
+        </Row>
+        <Form.Group className="mb-3" controlId="formGridAddress1">
+          <Form.Label>Image</Form.Label>
           <Form.Control
-            type="text"
-            name="description"
-            onChange={handleChange}
-            value={product.description}
-            placeholder="Description"
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3">
-          <Form.Control
-            type="text"
-            name="category"
-            onChange={handleChange}
-            value={product.category}
-            placeholder="Category"
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3">
-          <Form.Control
-            type="URL"
+            placeholder="Enter Image url"
             name="image"
             onChange={handleChange}
-            value={product.image}
-            placeholder="Image URL"
+            value={products.image}
           />
         </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+        <div class="text-center">
+          <Button variant="warning" type="submit" text-align="center">
+            Submit
+          </Button>
+        </div>
       </Form>
     </div>
   );
