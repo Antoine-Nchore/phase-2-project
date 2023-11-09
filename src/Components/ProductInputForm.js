@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 // const BASE_URL = " http://localhost:8001/products";
 
 function ProductInputForm() {
-  const [data, setData] = useState({
+  const [products, setProducts] = useState({
     title: " ",
     price: " ",
     description: " ",
@@ -14,9 +14,9 @@ function ProductInputForm() {
   });
 
   const handleChange = (e) => {
-    const title = e.target.title;
-    const value = e.target.value;
-    setData({ ...data, [title]: value });
+    const name = e.target;
+
+    setData({ ...products, [name]: value });
   };
 
   const handleSubmit = (e) => {
@@ -25,7 +25,7 @@ function ProductInputForm() {
     fetch("http://localhost:8001/products", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify(products),
     })
       .then((res) => {})
       .catch((err) => {});
@@ -39,6 +39,7 @@ function ProductInputForm() {
           <Form.Control
             type="text"
             name="title"
+            value={product.title}
             onChange={handleChange}
             placeholder="Title"
           />
@@ -48,6 +49,7 @@ function ProductInputForm() {
           <Form.Control
             type="number"
             name="price"
+            value={product.price}
             onChange={handleChange}
             placeholder="Price"
           />
@@ -58,6 +60,7 @@ function ProductInputForm() {
             type="text"
             name="description"
             onChange={handleChange}
+            value={product.description}
             placeholder="Description"
           />
         </Form.Group>
@@ -67,6 +70,7 @@ function ProductInputForm() {
             type="text"
             name="category"
             onChange={handleChange}
+            value={product.category}
             placeholder="Category"
           />
         </Form.Group>
@@ -76,6 +80,7 @@ function ProductInputForm() {
             type="URL"
             name="image"
             onChange={handleChange}
+            value={product.image}
             placeholder="Image URL"
           />
         </Form.Group>

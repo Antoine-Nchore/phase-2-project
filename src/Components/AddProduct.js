@@ -1,7 +1,11 @@
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
 
 function AddProduct() {
-  return <Button variant="outline-primary">Add Product</Button>;
+  const navigate = useNavigate();
+  return (
+    <button onClick={() => navigate("/ProductInputForm")}>AddProduct</button>
+  );
 }
 
 export default AddProduct;
