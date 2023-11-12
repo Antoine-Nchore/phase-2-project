@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Results from "./Components/Results";
 import Cart from "./Components/Cart";
 import Cartegory from "./Components/Cartegory";
+import SearchBar from "./Components/SearchBar";
+import ProductInputForm from "./Components/AddProduct";
 
 
 const baseURL = "http://localhost:8001/products";
@@ -12,6 +14,9 @@ function App() {
   const [showCart, setShowCart] = useState(false);
   const [productCounts, setProductCounts] = useState({});
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  const [category, setCategory] = useState("All");
+
   
 
   useEffect(() => {
@@ -22,16 +27,34 @@ function App() {
       });
   }, []);
 
-  const filterProductsByCategory = (category) => {
-    if (category === "All") {
-      setFilteredProducts(products);
-    } else {
-      const filtered = products.filter(
-        (product) => product.category === category
-      );
-      setFilteredProducts(filtered);
+  function handleAddItem(newItem) {
+    setProducts((prevProducts) => [...prevProducts, newItem]);
+    setFilteredProducts((prevFilteredProducts) => [
+      ...prevFilteredProducts,
+      newItem,
+    ]);
+    if (newItem.category === "All" || newItem.category === category) {
+    setFilteredProducts((prevFilteredProducts) => [...prevFilteredProducts, newItem]);
     }
-  };
+  }
+
+   const handleSearch = (text) => {
+     setSearchText(text);
+   };
+
+
+ const filterProductsByCategory = (selectedCategory) => {
+   if (selectedCategory === "All") {
+     setFilteredProducts(products);
+   } else {
+     const filtered = products.filter(
+       (product) => product.category === selectedCategory
+     );
+     setFilteredProducts(filtered);
+   }
+
+   setCategory(selectedCategory); 
+ };
 
   const addToCart = (product) => {
     // Increment the count for the product in productCounts
@@ -120,13 +143,15 @@ const decrementCount = (product) => {
             </span>
           </h1>
         </div>
+        <div style={{ display: "inline-block" }}>
+          <SearchBar onSearch={handleSearch} products={products} />
+        </div>
 
         <div
           className="icon"
           style={{
             cursor: "pointer",
             display: "inline-block",
-            marginLeft: "64rem",
             fontFamily: "fantasy",
             marginBottom: "10px",
           }}
@@ -149,6 +174,9 @@ const decrementCount = (product) => {
           </span>
         </div>
       </div>
+      <div>
+        <ProductInputForm onAddItem={handleAddItem} />
+      </div>
       {showCart ? (
         <Cart
           cart={cart}
@@ -160,7 +188,11 @@ const decrementCount = (product) => {
           decrementCount={decrementCount}
         />
       ) : (
-        <Results products={filteredProducts} addToCart={addToCart} />
+        <Results
+          products={filteredProducts}
+          addToCart={addToCart}
+          searchText={searchText}
+        />
       )}
     </>
   );

@@ -4,10 +4,14 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function Results({ products, addToCart }) {
+function Results({ products, addToCart, searchText }) {
+   const filterProducts = products.filter((products) =>
+     products.title.toLowerCase().includes(searchText.toLowerCase())
+   );
+
   return (
     <Row>
-      {products.map((product) => (
+      {filterProducts.map((product) => (
         <Col key={product.id}>
           <Card
             style={{

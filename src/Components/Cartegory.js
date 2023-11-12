@@ -5,7 +5,7 @@ function Cartegory({ filterProductsByCategory }) {
   return (
     <div>
       <Dropdown>
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
+        <Dropdown.Toggle variant="warning" id="dropdown-basic">
           Category
         </Dropdown.Toggle>
 
