@@ -6,7 +6,7 @@ function Category({ filterProductsByCategory }) {
   return (
     <div>
       <Dropdown>
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
+        <Dropdown.Toggle variant="warning" id="dropdown-basic">
           Category
         </Dropdown.Toggle>
 
@@ -31,7 +31,7 @@ function Category({ filterProductsByCategory }) {
             Electronics
           </Dropdown.Item>
           <Dropdown.Item onClick={() => filterProductsByCategory("jewelery")}>
-            Jewelry
+            Jewelery
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>

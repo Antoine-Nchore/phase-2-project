@@ -1,22 +1,4 @@
- anto
- anto
-anto
-=======
- hillary
- hillary
-=======
- brenda
-brenda
- main
- main
-=======
-james
- james
-=======
-nath
-main
- main
-=======
+
 import React, { useEffect, useState } from "react";
 import Results from "./Components/Results";
 import Cart from "./Components/Cart";
@@ -217,5 +199,3 @@ function App() {
 }
 
 export default App;
-main
- main

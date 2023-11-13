@@ -18,7 +18,7 @@ const initialCategories = [
   "electronics",
   "women's clothing",
   "men's clothing",
-  "jewelry",
+  "jewelery",
 ];
 
 function AddProduct({ onAddItem }) {
