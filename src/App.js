@@ -3,7 +3,7 @@ import Results from "./Components/Results";
 import Cart from "./Components/Cart";
 import Cartegory from "./Components/Cartegory";
 import SearchBar from "./Components/SearchBar";
-import ProductInputForm from "./Components/AddProduct";
+import AddProduct from "./Components/AddProduct";
 
 
 const baseURL = "http://localhost:8001/products";
@@ -175,7 +175,7 @@ const decrementCount = (product) => {
         </div>
       </div>
       <div>
-        <ProductInputForm onAddItem={handleAddItem} />
+        <AddProduct onAddItem={handleAddItem} />
       </div>
       {showCart ? (
         <Cart

@@ -21,7 +21,7 @@ const initialCategories = [
   "jewelry",
 ];
 
-function ProductInputForm({ onAddItem }) {
+function AddProduct({ onAddItem }) {
   const [products, setProducts] = useState(initialProductState);
 
   const [categories] = useState(initialCategories);
@@ -160,4 +160,4 @@ function ProductInputForm({ onAddItem }) {
   );
 }
 
-export default ProductInputForm;
+export default AddProduct;
