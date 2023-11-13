@@ -3,7 +3,7 @@ import Results from "./Components/Results";
 import Cart from "./Components/Cart";
 import Cartegory from "./Components/Cartegory";
 import SearchBar from "./Components/SearchBar";
-import ProductInputForm from "./Components/ProductInputForm";
+import AddProduct from "./Components/AddProduct";
 
 const baseURL = "http://localhost:8001/products";
 
@@ -158,8 +158,9 @@ function App() {
         </div>
       </div>
       <div>
-        <ProductInputForm />
+        <AddProduct />
       </div>
+
       {showCart ? (
         <Cart
           cart={cart}
