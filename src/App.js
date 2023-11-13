@@ -6,7 +6,7 @@ import Cartegory from "./Components/Category";
 import SearchBar from "./Components/SearchBar";
 import AddProduct from "./Components/AddProduct";
 
-const baseURL = "http://localhost:8001/products";
+const baseURL = "https://products-yoey.onrender.com/products";
 
 function App() {
   const [products, setProducts] = useState([]);

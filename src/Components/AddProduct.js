@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-const BASE_URL = " http://localhost:8001/products";
+const BASE_URL = "https://products-yoey.onrender.com/products";
 
 const initialProductState = {
   title: "",
