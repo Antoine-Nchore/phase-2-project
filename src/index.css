@@ -1,15 +1,43 @@
+ nathan
 .icon:hover {
   color: orange;
 }
 
 .bi bi-stars {
+=======
+.icon:hover{
+  color: or main
   height: 30px;
   width: 30px;
-  color: orange;
-}
-
+  color: orange; nathan
 .top {
   align-items: center;
   background-color: black;
   color: white;
 }
+=======
+.top{
+  align-items: center;
+  background-color: black;
+  color: white;
+   display: flex;
+   padding: 20px;
+}
+
+
+
+
+.top h1 {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  cursor: pointer;
+  margin-left: 30px;
+  font-family: fantasy;
+  margin-right: 20rem;
+}
+
+
+ main
