@@ -241,6 +241,23 @@
       }
     },
     {
+ hillary
+      "title": "Samsung Galaxy s23",
+      "description": "6.8\" - 512GB + 12GB - Dual SIM - Green",
+      "category": "electronics",
+      "image": "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/1137061/1.jpg?6862",
+      "price": "220",
+      "id": 21
+    },
+    {
+      "title": "HP Spectre x360 2-in-1 Laptop",
+      "description": "Windows 11 Home, 16\", touch screen, Intel® Core™ i7, 16GB RAM, 2TB SSD, Intel® Arc™ A370M, UHD+, Nocturne blue",
+      "category": "electronics",
+      "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07877576.png",
+      "price": "1649.99",
+      "id": 22
+    }
+=======
  james
       "id": 21,
       "title": "Apple iPhone 15 Pro Max 512GB",
@@ -302,6 +319,7 @@
       "price": "130",
       "id": 21
     }
+ main
  main
   ]
 }

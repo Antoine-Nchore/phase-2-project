@@ -1,3 +1,25 @@
+ hillary
+ hillary
+.icon:hover{
+    color: orange;
+  }
+  
+  
+  .bi bi-stars{
+    height: 30px;
+    width: 30px;
+    color: orange;
+  }
+  
+  
+  .top{
+    align-items: center;
+    background-color: black;
+    color: white;
+  }
+  
+  
+=======
  brenda
 brenda
 .search-bar-container{
@@ -11,6 +33,7 @@ brenda
 }
 =======
 .icon:hover{
+ main
 =======
  nathan
 .icon:hover {
@@ -58,5 +81,6 @@ brenda
  brenda
 main
 =======
+ main
  main
  main
