@@ -1,10 +1,49 @@
  anto
  anto
+ anto
 
   
   
 =======
 .icon:hover{
+=======
+ hillary
+ hillary
+.icon:hover{
+    color: orange;
+  }
+  
+  
+  .bi bi-stars{
+    height: 30px;
+    width: 30px;
+    color: orange;
+  }
+  
+  
+  .top{
+    align-items: center;
+    background-color: black;
+    color: white;
+  }
+  
+  
+=======
+ brenda
+brenda
+.search-bar-container{
+    padding-top: 0vh;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+}
+=======
+.icon:hover{
+ main
+ main
 =======
  nathan
 .icon:hover {
@@ -53,5 +92,10 @@
 }
 
 
+ brenda
+main
+=======
+ main
+ main
  main
  main
