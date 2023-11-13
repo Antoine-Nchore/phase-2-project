@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Phase 2-Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+E-Commerce react App
 
-## Available Scripts
+## Description of the Project
+The "E-Commerce react App " is a web application designed to  provide a seamless way to access different categories of products using API. The API offers one main functionality: It retrieves a variety of products.
+Response Handling:
+1.For a selected product,the API responds by display the product's "title" ,"description" ,"category" ,"image" and "price".
 
-In the project directory, you can run:
+# Project Setup
+1. Create project folder
+2. Create new github repository
+3. All the group members were invited as collaborators and assigned a task
+4. Regular commit to the repository
+5. We hosted our repository on vercel
 
-### `npm start`
+# Requirements
+1. Text Editor 
+2. Node Environment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Purpose
+1.User should be able to check available products for each category provided ,title, description and price of individual product.
+2.The user should be able to click "Sell on Breelary" button to add a product.
+3.The user should be able to add to cart a product for purchase by clicking "Add to Cart"   button.
+4.The user is able to return to the home page by clicking "BREELARY" header.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Technology Used
+ 1.HTML
+ 2.Bootstrap CSS
+ 3.Javascript
+ 4.API intergration to get the products.
 
-### `npm test`
+ # Link to live site page
+https://phase-2-project-five.vercel.app/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Authors
+1.Brenda Kungu
+2.Anthony Nchore
+3.Nathan Sachombe
+4.James Ekasiba
+5.Korir Hillary
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# License : MIT
+<a href= "License.md">MIT License</a>
+  
