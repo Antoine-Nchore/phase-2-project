@@ -1,4 +1,5 @@
  hillary
+ hillary
 .icon:hover{
     color: orange;
   }
@@ -19,8 +20,24 @@
   
   
 =======
+ brenda
+brenda
+.search-bar-container{
+    padding-top: 0vh;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+}
+=======
+.icon:hover{
+ main
+=======
  nathan
 .icon:hover {
+ main
   color: orange;
 }
 
@@ -61,5 +78,9 @@
 }
 
 
+ brenda
+main
+=======
+ main
  main
  main
