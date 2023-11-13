@@ -241,6 +241,15 @@
       }
     },
     {
+ anto
+ anto
+      "title": "Samsung Galaxy S23 ultra",
+      "description": "5G, 16GB RAM",
+      "category": "electronics",
+      "image": "https://m.media-amazon.com/images/I/61j99uUfXNL.jpg",
+      "price": "1000",
+      "id": 21
+=======
  hillary
       "title": "Samsung Galaxy s23",
       "description": "6.8\" - 512GB + 12GB - Dual SIM - Green",
@@ -256,6 +265,7 @@
       "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07877576.png",
       "price": "1649.99",
       "id": 22
+ main
     }
 =======
  james
