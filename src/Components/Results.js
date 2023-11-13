@@ -1,26 +1,43 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
+function Results({ products, addToCart, searchText }) {
+   const filterProducts = products.filter((products) =>
+     products.title.toLowerCase().includes(searchText.toLowerCase())
+   );
 
-function Results({products}) {
   return (
     <Row>
-        {products.map((products)=>(
-        <Col>
-    <Card style={{ width: '25rem',height: "42rem", marginTop: "20px" }}>
-      <Card.Img variant="top" src={products.image} style={{height: "350px"}}/>
-      <Card.Body>
-        <Card.Title><h2>{products.title}</h2></Card.Title>
-        <Card.Text>
-          ${products.price}
-        </Card.Text>
-        <Button variant="warning">Add to Cart</Button>
-      </Card.Body>
-    </Card>
-    </Col>
-    ))}
+      {filterProducts.map((product) => (
+        <Col key={product.id}>
+          <Card
+            style={{
+              width: "14rem",
+              height: "28rem",
+              marginTop: "20px",
+              marginLeft: "10px",
+            }}
+          >
+            <Card.Img
+              variant="top"
+              src={product.image}
+              style={{ height: "200px", width: "200px" }}
+            />
+            <Card.Body>
+              <Card.Title>
+                <h5>{product.title}</h5>
+              </Card.Title>
+              <Card.Text>${product.price}</Card.Text>
+              <Button variant="warning" onClick={() => addToCart(product)}>
+                Add to Cart
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
     </Row>
   );
 }
