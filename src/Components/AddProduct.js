@@ -160,4 +160,8 @@ function AddProduct({ onAddItem }) {
   );
 }
 
+<<<<<<< HEAD
 export default AddProduct;
+=======
+export default AddProduct;
+>>>>>>> cc25a19ed82e9a650e75f19652cb083bacc02b2f
