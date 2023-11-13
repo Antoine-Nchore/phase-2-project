@@ -2,7 +2,7 @@ import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
 
-function Cartegory({ filterProductsByCategory }) {
+function Category({ filterProductsByCategory }) {
   return (
     <div>
       <Dropdown>
@@ -40,4 +40,4 @@ function Cartegory({ filterProductsByCategory }) {
 }
 
 
-export default Cartegory;
+export default Category;
